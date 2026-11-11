@@ -29,3 +29,13 @@ Default calorie and exercise references are illustrative, not medical advice.
 - The new UI is implemented in `challenges.js` with no external dependencies or API calls.
 - Suggested acceptance checks: log a set in Challenge HQ and verify Daily Habits/Exercise totals; correct a previous date and verify monthly totals; navigate between months; create/log/delete a custom challenge; start/stop a rest timer; export/import JSON and verify preserved history; reload and switch themes.
 - JavaScript syntax validated; automated browser acceptance testing has not yet been completed.
+
+
+## Momentum 3.1 — Daily Experience
+- Home opens with a daily 100 push-up mission, quick-set buttons and monthly 3,000-rep progress.
+- Workout Mode is available from the Home mission: quick/custom sets, optional live rest timer, elapsed session timer, undo individual sets, and finish-session history. The timer runs while the page is open; session state is not persisted across reloads.
+- Daily Habits includes one-tap habit check-ins and optional numeric targets, saved in `habitTargets` and `habitAmounts`. Existing habit logs remain intact.
+- Progress History adds personal records from the last 180 days, 7-day comparisons and current 100-rep streak.
+- PWA manifest and service worker cache the application shell for offline reopening after a successful online load. iOS: Safari → Share → Add to Home Screen. SVG is the current icon; a PNG Apple Touch icon would improve compatibility.
+- All user data remains in browser-local storage and JSON export; installing the app does not back up data. Preserve exports before clearing website storage.
+- Verification: JavaScript syntax and repository integration checked. Full browser regression, iOS install and offline testing still need manual confirmation.
